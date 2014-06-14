@@ -1,0 +1,33 @@
+# The simulation stop time (t) is 100 seconds
+t = 100
+
+# The kinetic real-number rate constants of the four
+# reactions: a, b, c, d
+a = 0.5
+b = 0.25
+c = 0.125
+d = 0.0625
+
+# The initial integer molecule counts of the five species,
+# A, B, C, D, and E. Only A is present initially.
+# (A, B, C, D, E) = (1000, 0, 0, 0, 0)
+A = 1000
+B = 0
+C = 0
+D = 0
+E = 0
+
+# The four reactions. The reaction `a' transforms
+# A into B. The reaction 'b' transforms B into C, and
+# so on through the cascade. The cascade stops
+# with E.
+
+# A has a special role because it is only consumed,
+# never produced. E has a special role because it
+# is only produced, never consumed.
+
+a : A -> B
+b : B -> C
+c : C -> D
+d : D -> E
+
